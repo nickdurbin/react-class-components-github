@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import Axios from 'axios'
-import Card from './components/Card'
+import Card from './components/Card';
+import FollowerList from './components/FollowerList';
 
 export default class App extends Component {
   state = {
-    userData: []
+    userData: [],
+    followerData: []
   }
 
   componentDidMount () {
@@ -30,7 +32,14 @@ export default class App extends Component {
   render() {
     return (
       <div className='app'>
+        <h1>GitHub Data</h1>
         <Card userData={this.state.userData} />
+        <div className='followersDisplay'>
+          <h2>List of Followers</h2>
+          <div className='followerCards'>
+            <FollowerList followerData={this.state.followerData} />
+          </div>
+        </div>
       </div>
     )
   }
