@@ -6,7 +6,6 @@ import Search from './components/Search';
 
 export default class App extends Component {
   state = {
-    userData: [],
     followerData: [],
     search: '',
     user: {},
@@ -17,7 +16,7 @@ export default class App extends Component {
     Axios.get('https://api.github.com/users/nickdurbin')
       .then(res => {
         console.log(res.data, 'This is your data form Github.')
-        return this.setState({ userData: res.data })
+        return this.setState({ user: res.data })
       })
       .catch(err => {
         console.log(err, 'You did not get the data.')
