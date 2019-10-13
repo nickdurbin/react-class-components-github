@@ -6,14 +6,14 @@ export default class Card extends Component {
     return (
       <div className='mainContainer'>
         <div className='avatarContainer'>
-          <img className='avatar' src={this.props.userData.avatar_url} alt={this.props.userData.name} />
+          <img className='avatar' src={this.props.user.avatar_url} alt={this.props.user.name} />
         </div>
         <div className ='detailsContainer'>
-          <h2>Name: {this.props.userData.name}</h2>
-          <h3>Username: {this.props.userData.login}</h3>
-          <h4>Followers: {this.props.userData.followers}</h4>
-          <h4>Following: {this.props.userData.following}</h4>
-          <h4>Bio: {this.props.userData.bio}</h4>
+          <h2>Name: {this.props.user.name}</h2>
+          <h3>Username: {this.props.user.login}</h3>
+          <h4>Followers: {this.props.user.followers}</h4>
+          <h4>Following: {this.props.user.following}</h4>
+          <h4>Bio: {this.props.user.bio}</h4>
         </div> 
       </div>
     )
