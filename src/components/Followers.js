@@ -19,8 +19,8 @@ export default class Followers extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.toggleOpen}>
+      <>
+        <button className='followerBtn' onClick={this.toggleOpen}>
           {this.state.isOpen === false ? 'Show Followers' : 'Hide Followers'}
         </button>
         <div className="followers">
@@ -34,7 +34,7 @@ export default class Followers extends Component {
             )
           })}
         </div>
-      </div>
+      </>
     )
   }
 }
