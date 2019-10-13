@@ -67,3 +67,8 @@ code {
   margin: 1%;
   padding: 1%;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+}

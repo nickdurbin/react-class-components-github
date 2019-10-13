@@ -5,6 +5,7 @@ export default class Card extends Component {
 
   render() {
     return (
+      <>
       <div className='mainContainer'>
         <div className='avatarContainer'>
           <img className='avatar' src={this.props.user.avatar_url} alt={this.props.user.name} />
@@ -16,11 +17,17 @@ export default class Card extends Component {
           <h4>Following: {this.props.user.following}</h4>
           <h4>Bio: {this.props.user.bio}</h4>
         </div>
-        <Followers 
-          followers={this.props.followers} 
-          getFollowers={this.props.getFollowers}
-          />
       </div>
+      <div className='followersDisplay'>
+        <h2>List of Followers</h2>
+        <div className='followerCards'>
+          <Followers 
+            followers={this.props.followers} 
+            getFollowers={this.props.getFollowers}
+          />
+        </div>
+      </div>
+      </>
     )
   }
 }
