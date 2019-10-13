@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Followers from './Followers';
 
 export default class Card extends Component {
 
@@ -14,7 +15,11 @@ export default class Card extends Component {
           <h4>Followers: {this.props.user.followers}</h4>
           <h4>Following: {this.props.user.following}</h4>
           <h4>Bio: {this.props.user.bio}</h4>
-        </div> 
+        </div>
+        <Followers 
+          followers={this.props.followers} 
+          getFollowers={this.props.getFollowers}
+          />
       </div>
     )
   }
